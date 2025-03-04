@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e3a8a; /* Blue background */
+  background-color: grey; 
 }
 
 .calculator {
@@ -20,10 +20,23 @@ body {
   justify-content: center;
   align-items: center;
   width: 300px;
-  background-color:#3a3a3a; /* Black calculator layout */
+  background-color: black; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.calculator::before {
+  content: "Calculator"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  font-size: 40px;
+  color: white; 
+  opacity: 0.1; 
+  pointer-events: none; 
+  z-index: -1; 
 }
 
 .calculator-screen input {
@@ -33,10 +46,10 @@ body {
   text-align: right;
   padding: 10px;
   border: none;
-  background-color: #ff8c00; /* Orange color for input field */
+  background-color: yellow; 
   border-radius: 8px;
   margin-bottom: 20px;
-  color: white; /* Text color for the input */
+  color: #333; 
 }
 
 .buttons {
@@ -48,18 +61,19 @@ body {
 button {
   padding: 20px;
   font-size: 20px;
-  background-color: #e11d48; /* Red button color */
+  background-color: #f97316; 
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  color: #3b82f6; 
   transition: background-color 0.2s ease;
-  color: white;
 }
 
 button:hover {
-  background-color: #b91c3a; /* Darker red when hovering */
+  background-color: #ea580c; 
 }
 
 button:active {
-  background-color: #9b1130; /* Even darker red when button is pressed */
+  background-color: #9b4d19; 
 }
+
